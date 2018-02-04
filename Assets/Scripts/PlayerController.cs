@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void OnPlayerDeath() { // called by string reference
+    void OnPlayerDeath() { // called by string reference
         isControlEnabled = false;
     }
 

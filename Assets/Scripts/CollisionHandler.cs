@@ -5,20 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour {
 
-    [Tooltip("In seconds")] [SerializeField] float levelLoadDelay = 1f;
-    [Tooltip("FX prefab on player")] [SerializeField] GameObject deathFX;
+    [Tooltip("In seconds")] [SerializeField] float levelLoadDelay = 2f;
+    [SerializeField] GameObject deathFX;
+    [SerializeField] Transform parentForFX;
 
-    private void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {
         StartDeathSequence();
-        deathFX.SetActive(true);
         Invoke("ReloadScene", levelLoadDelay);
+        KillPlayer();
     }
 
-    private void StartDeathSequence() {
+    void StartDeathSequence() {
         SendMessage("OnPlayerDeath");
     }
 
-    private void ReloadScene() { // string referenced
+    void ReloadScene() { // string referenced
         SceneManager.LoadScene(1);
+    }
+
+    void KillPlayer() {
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parentForFX;
+
+        transform.Translate(Vector3.down * 90);
     }
 }
