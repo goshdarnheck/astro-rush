@@ -10,7 +10,10 @@ public class EnemyController : MonoBehaviour {
     [Tooltip("If above this object, can be killed.")][SerializeField] Transform ground;
     [SerializeField] float speed = 5f;
 
-	void Start() {
+    enum MovementType {straight, dodgy};
+    [SerializeField] MovementType movementType = MovementType.straight;
+
+    void Start() {
         
     }
 	
@@ -18,7 +21,11 @@ public class EnemyController : MonoBehaviour {
         float step = speed * Time.deltaTime;
 
         if (target != null) {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            if (movementType == MovementType.dodgy) {
+                transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            } else {
+                transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            }
         }
     }
 
