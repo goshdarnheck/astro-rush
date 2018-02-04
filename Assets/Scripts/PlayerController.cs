@@ -32,8 +32,6 @@ public class PlayerController : MonoBehaviour {
             spin = -Mathf.Abs(spinSpeedBound);
         }
 
-        //var thing = new Vector3(0, spin, 0);
-
         transform.Rotate(new Vector3(0, spin, 0), Mathf.Abs(spin) * Time.deltaTime);
     }
 }

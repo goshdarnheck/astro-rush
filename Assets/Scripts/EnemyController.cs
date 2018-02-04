@@ -13,11 +13,16 @@ public class EnemyController : MonoBehaviour {
 	
 	void Update() {
         float step = speed * Time.deltaTime;
+
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
     }
 
     void OnParticleCollision(GameObject other) {
-        KillEnemy();
+        var distance = Vector3.Distance(gameObject.transform.position, target.transform.position);
+
+        if (distance < 30f) {
+            KillEnemy();
+        }
     }
 
     void KillEnemy() {
