@@ -129,7 +129,7 @@ MonoBehaviour:
   parentForFX: {fileID: 0}
   target: {fileID: 0}
   ground: {fileID: 0}
-  speed: 3
+  speed: 5
 --- !u!136 &136039014033184894
 CapsuleCollider:
   m_ObjectHideFlags: 1
