@@ -2,25 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
+    [Tooltip("In seconds")] [SerializeField] float levelLoadDelay = 3f;
+
+    [SerializeField] int health = 5;
     [SerializeField] float spinSpeedFactor = 10f;
     [SerializeField] float spinSpeedBound = 500f;
 
     [SerializeField] GameObject gunSlotTop = null;
     [SerializeField] GameObject gunSlotBottom = null;
 
+    [SerializeField] GameObject deathFX;
+    [SerializeField] Transform parentForFX;
+
     GameObject gunTop = null;
     GameObject gunBottom = null;
 
     bool isControlEnabled = true;
     float spin = 0f;
+    ScoreBoard scoreBoard;
 
     void Start () {
+        scoreBoard = FindObjectOfType<ScoreBoard>();
+        scoreBoard.SetHealth(health);
+
         SetGuns();
 
-        //gunSlotBottom = Resources.Load("Gun Purple v1") as GameObject;
+        //gunSlotBottom = Resources.Load("Gun Green v1") as GameObject;
         //Invoke("SetGunBottom", 2f);
     }
 
@@ -56,8 +67,26 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void OnPlayerDeath() { // called by string reference
-        isControlEnabled = false;
+    void OnPlayerHit() { // called by string reference
+        health--;
+        scoreBoard.SetHealth(health);
+
+        if (health < 1) {
+            isControlEnabled = false;
+            Invoke("ReloadScene", levelLoadDelay);
+            KillPlayer();
+        }
+    }
+
+    void KillPlayer() {
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parentForFX;
+
+        transform.Translate(Vector3.down * 90);
+    }
+
+    void ReloadScene() { // string referenced
+        SceneManager.LoadScene(1);
     }
 
     void ProcessRotation() {

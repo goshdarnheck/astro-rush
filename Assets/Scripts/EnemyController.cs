@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
+    [SerializeField] int scoreValue = 1;
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform parentForFX;
     [SerializeField] Transform target;
@@ -13,8 +14,10 @@ public class EnemyController : MonoBehaviour {
     enum MovementType {straight, dodgy};
     [SerializeField] MovementType movementType = MovementType.straight;
 
+    ScoreBoard scoreBoard;
+
     void Start() {
-        
+        scoreBoard = FindObjectOfType<ScoreBoard>();
     }
 	
 	void Update() {
@@ -38,6 +41,7 @@ public class EnemyController : MonoBehaviour {
         Vector2 pos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
 
         if (rect.Contains(pos)) {
+            scoreBoard.ScoreHit(scoreValue);
             KillEnemy();
         }
     }

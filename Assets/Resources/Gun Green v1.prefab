@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4408034644553214}
   m_Layer: 0
-  m_Name: Gun Purple v1
+  m_Name: Gun Green v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1748581718501902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0.65}
+  m_LocalPosition: {x: 1.5003433, y: 6.6875095, z: 75.9208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4528839860971580}
@@ -116,7 +116,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 22295062f05ebf04bb342799fdfd26f2, type: 2}
+  - {fileID: 2100000, guid: 0e43923509c7b5b4e9ba65260ebbe507, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -305,7 +305,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7529412, g: 0.41568628, b: 0.7607843, a: 1}
+      maxColor: {r: 0.5176471, g: 0.8117647, b: 0.27058825, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -2946,8 +2946,8 @@ ParticleSystem:
       maxColor: {r: 0.11724138, g: 1, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.7529412, g: 0.41568628, b: 0.7607843, a: 1}
-        key1: {r: 0.7529412, g: 0.41568628, b: 0.7607843, a: 0.41568628}
+        key0: {r: 0.5176471, g: 0.8117647, b: 0.27058825, a: 1}
+        key1: {r: 0.5176471, g: 0.8117647, b: 0.27058825, a: 0.41568628}
         key2: {r: 0, g: 1, b: 0.99999976, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
