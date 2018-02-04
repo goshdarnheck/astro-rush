@@ -125,7 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5f62ec3fcac2d40886c901469994dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathFX: {fileID: 1469142659871422, guid: ab79a37535b979f48b6de56e3a0a5cb0, type: 2}
+  parentForFX: {fileID: 0}
   target: {fileID: 0}
+  ground: {fileID: 0}
   speed: 3
 --- !u!136 &136039014033184894
 CapsuleCollider:

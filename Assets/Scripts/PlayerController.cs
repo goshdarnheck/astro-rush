@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    private void OnPlayerDeath() { // called by string reference
+        isControlEnabled = false;
+    }
+
     void ProcessRotation() {
         float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
 
