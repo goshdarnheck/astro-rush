@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     [Tooltip("In seconds")] [SerializeField] float levelLoadDelay = 3f;
 
     [SerializeField] int health = 5;
+    [SerializeField] int healthLimit = 10;
     [SerializeField] float spinSpeedFactor = 10f;
     [SerializeField] float spinSpeedBound = 500f;
 
@@ -77,6 +78,16 @@ public class PlayerController : MonoBehaviour {
             Invoke("ReloadGame", levelLoadDelay);
             KillPlayer();
         }
+    }
+
+    public void PlayerHealthUp() {
+        health++;
+
+        if (health > healthLimit) {
+            health = healthLimit;
+        }
+
+        scoreBoard.SetHealth(health);
     }
 
     void KillPlayer() {
