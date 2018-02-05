@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour {
 
     public float speed = 5f;
-    int scoreValue = 1;
+    public int scoreValue = 1;
+
     GameObject deathFX;
     Transform parentForFX;
     Transform target;
@@ -28,7 +29,7 @@ public class EnemyController : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {
         KillEnemy();
     }
 
