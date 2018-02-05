@@ -26,6 +26,7 @@ public class ScoreBoard : MonoBehaviour {
         for (int i = 0; i < healthValue; i++) {
             healthString += "❤";
         }
+        print(healthString);
         healthText.text = healthString;
     }
 }

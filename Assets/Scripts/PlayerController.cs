@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
     float spin = 0f;
     ScoreBoard scoreBoard;
 
-    void Start () {
+    void Start() {
         scoreBoard = FindObjectOfType<ScoreBoard>();
         scoreBoard.SetHealth(health);
 
@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update () {
+        scoreBoard.SetHealth(health);
         if (isControlEnabled) {
             ProcessRotation();
         }
@@ -73,7 +74,7 @@ public class PlayerController : MonoBehaviour {
 
         if (health < 1) {
             isControlEnabled = false;
-            Invoke("ReloadScene", levelLoadDelay);
+            Invoke("ReloadGame", levelLoadDelay);
             KillPlayer();
         }
     }
@@ -85,8 +86,8 @@ public class PlayerController : MonoBehaviour {
         transform.Translate(Vector3.down * 90);
     }
 
-    void ReloadScene() { // string referenced
-        SceneManager.LoadScene(1);
+    void ReloadGame() { // string referenced
+        SceneManager.LoadScene(0);
     }
 
     void ProcessRotation() {
