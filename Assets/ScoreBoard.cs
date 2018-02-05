@@ -23,10 +23,11 @@ public class ScoreBoard : MonoBehaviour {
 
     public void SetHealth(int healthValue) {
         string healthString = "";
+
         for (int i = 0; i < healthValue; i++) {
             healthString += "❤";
         }
-        print(healthString);
+
         healthText.text = healthString;
     }
 }
