@@ -16,6 +16,8 @@ public class Wave : MonoBehaviour {
     }
 
     IEnumerator EmitEnemies() {
+        yield return new WaitForSeconds(delay);
+
         while (remaining > 0) {
             GameObject enemyInstance = Instantiate(enemy, transform.position, Quaternion.identity);
             EnemyController enemyController = enemyInstance.GetComponent<EnemyController>();
