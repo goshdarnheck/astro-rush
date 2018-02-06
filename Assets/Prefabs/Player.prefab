@@ -153,9 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166e62569d339a245b6257d4d7b18ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoadDelay: 1
-  deathFX: {fileID: 1015220829237886, guid: 3e60b281edf5cb7419f0471da2a43679, type: 2}
-  parentForFX: {fileID: 0}
 --- !u!114 &114532016040791200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +164,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e364097c4de558a42b90b4c0e7a26866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoadDelay: 3
+  health: 5
+  healthLimit: 10
   spinSpeedFactor: 15
-  spinSpeedBound: 120
+  spinSpeedBound: 150
   gunSlotTop: {fileID: 1375277124653198, guid: 21f9165672dfc1a4a87b1f45603ab581, type: 2}
   gunSlotBottom: {fileID: 0}
+  deathFX: {fileID: 1015220829237886, guid: 3e60b281edf5cb7419f0471da2a43679, type: 2}
+  parentForFX: {fileID: 4590671789794154}
