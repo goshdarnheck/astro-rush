@@ -4,35 +4,32 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    [SerializeField] int scoreValue = 1;
-    [SerializeField] GameObject deathFX;
-    [SerializeField] Transform parentForFX;
-    [SerializeField] Transform target;
-    [Tooltip("If above this object, can be killed.")][SerializeField] Transform ground;
-    [SerializeField] float speed = 5f;
+    public float speed = 5f;
+    public int scoreValue = 1;
 
-    enum MovementType {straight, dodgy};
-    [SerializeField] MovementType movementType = MovementType.straight;
-
+    GameObject deathFX;
+    Transform parentForFX;
+    Transform target;
+    Transform ground;
     ScoreBoard scoreBoard;
 
     void Start() {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        target = FindObjectOfType<PlayerController>().transform;
+        parentForFX = FindObjectOfType<RuntimeSpawn>().transform;
+        deathFX = Resources.Load("Enemy Explosion") as GameObject;
+        ground = FindObjectOfType<Ground>().transform;
     }
 	
 	void Update() {
         float step = speed * Time.deltaTime;
 
         if (target != null) {
-            if (movementType == MovementType.dodgy) {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            } else {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            }
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {
         KillEnemy();
     }
 

@@ -37,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4963515283593458}
   - component: {fileID: 33863202455031870}
-  - component: {fileID: 136330403366048866}
   - component: {fileID: 23792294054008046}
   m_Layer: 0
   m_Name: Cylinder
@@ -125,24 +124,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5f62ec3fcac2d40886c901469994dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 1
   deathFX: {fileID: 1469142659871422, guid: ab79a37535b979f48b6de56e3a0a5cb0, type: 2}
   parentForFX: {fileID: 0}
   target: {fileID: 0}
   ground: {fileID: 0}
   speed: 3
---- !u!136 &136330403366048866
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1448998653388416}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  movementType: 1
 --- !u!136 &136425299651207730
 CapsuleCollider:
   m_ObjectHideFlags: 1
