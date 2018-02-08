@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    public float speed = 5f;
+    public float speed = 2f;
     public int scoreValue = 1;
 
     GameObject deathFX;
