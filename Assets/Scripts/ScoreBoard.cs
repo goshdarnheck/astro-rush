@@ -11,6 +11,10 @@ public class ScoreBoard : MonoBehaviour {
     [SerializeField] Text scoreText;
     [SerializeField] Text healthText;
 
+    private void Awake() {
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
     void Start() {
         scoreText.text = "";
         healthText.text = "";

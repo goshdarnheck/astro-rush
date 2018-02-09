@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour {
     float spin = 0f;
     ScoreBoard scoreBoard;
 
+    private void Awake() {
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
     void Start() {
         scoreBoard = FindObjectOfType<ScoreBoard>();
         scoreBoard.SetHealth(health);

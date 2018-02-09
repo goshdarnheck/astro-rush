@@ -7,9 +7,11 @@ public class LevelManager : MonoBehaviour {
 
     Wave[] waves;
     EnemyController[] enemies;
+    PlayerController playerController;
 
     void Start() {
         waves = FindObjectsOfType<Wave>();
+        playerController = FindObjectOfType<PlayerController>();
     }
 	
 	void Update() {
@@ -34,6 +36,7 @@ public class LevelManager : MonoBehaviour {
 
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
             nextSceneIndex = 0;
+            Destroy(playerController.gameObject);
         }
 
         SceneManager.LoadScene(nextSceneIndex);
