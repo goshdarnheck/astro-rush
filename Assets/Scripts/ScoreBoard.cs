@@ -5,10 +5,6 @@ using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour {
 
-    int score;
-
-    [SerializeField] string scoreTextPrepend = "$";
-    [SerializeField] Text scoreText;
     [SerializeField] Text healthText;
 
     private void Awake() {
@@ -16,13 +12,7 @@ public class ScoreBoard : MonoBehaviour {
     }
 
     void Start() {
-        scoreText.text = "";
         healthText.text = "";
-    }
-	
-	public void ScoreHit(int scoreValue = 1) {
-        score += scoreValue;
-        scoreText.text = scoreTextPrepend + score;
     }
 
     public void SetHealth(int healthValue) {

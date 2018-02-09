@@ -11,11 +11,19 @@ public class EnemyController : MonoBehaviour {
     Transform parentForFX;
     Transform target;
     Transform ground;
-    ScoreBoard scoreBoard;
+    PowerupBar powerupBar;
 
     void Start() {
-        scoreBoard = FindObjectOfType<ScoreBoard>();
-        target = FindObjectOfType<PlayerController>().transform;
+        PlayerController playerController = FindObjectOfType<PlayerController>();
+
+        if (playerController != null) {
+            target = FindObjectOfType<PlayerController>().transform;
+        } else {
+            Destroy(gameObject);
+            return;
+        }
+
+        powerupBar = FindObjectOfType<PowerupBar>();
         parentForFX = FindObjectOfType<RuntimeSpawn>().transform;
         deathFX = Resources.Load("Enemy Explosion") as GameObject;
         ground = FindObjectOfType<Ground>().transform;
@@ -38,12 +46,12 @@ public class EnemyController : MonoBehaviour {
         Vector2 pos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
 
         if (rect.Contains(pos)) {
-            scoreBoard.ScoreHit(scoreValue);
             KillEnemy();
         }
     }
 
     void KillEnemy() {
+        powerupBar.powerUp(scoreValue);
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parentForFX;
         Destroy(gameObject);

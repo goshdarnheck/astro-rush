@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour {
 
     GameObject gunTop = null;
     GameObject gunBottom = null;
+    GameObject gunBlueV1;
+    GameObject gunGreenV1;
 
     bool isControlEnabled = true;
     float spin = 0f;
@@ -30,9 +32,26 @@ public class PlayerController : MonoBehaviour {
         DontDestroyOnLoad(transform.gameObject);
     }
 
+    public void PowerUp(int level) {
+        print(level);
+        switch (level) {
+            case 1:
+                gunSlotBottom = gunBlueV1;
+                break;
+            case 2:
+                gunSlotTop = gunGreenV1;
+                break;
+
+        }
+
+        SetGunTop();
+        SetGunBottom();
+    }
+
     void Start() {
         scoreBoard = FindObjectOfType<ScoreBoard>();
         scoreBoard.SetHealth(health);
+        gunBlueV1 = Resources.Load("Gun Blue v1") as GameObject;
 
         SetGuns();
 
@@ -98,10 +117,12 @@ public class PlayerController : MonoBehaviour {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parentForFX;
 
-        transform.Translate(Vector3.down * 90);
+        //transform.Translate(Vector3.down * 90);
+        
     }
 
     void ReloadGame() { // string referenced
+        Destroy(gameObject);
         SceneManager.LoadScene(0);
     }
 
