@@ -39,7 +39,9 @@ public class PlayerController : MonoBehaviour {
                 gunSlotBottom = gunBlueV1;
                 break;
             case 2:
+                print("LEVEL 2 SETUP");
                 gunSlotTop = gunGreenV1;
+                gunSlotBottom = gunBlueV1;
                 break;
 
         }
@@ -51,7 +53,9 @@ public class PlayerController : MonoBehaviour {
     void Start() {
         scoreBoard = FindObjectOfType<ScoreBoard>();
         scoreBoard.SetHealth(health);
+
         gunBlueV1 = Resources.Load("Gun Blue v1") as GameObject;
+        gunGreenV1 = Resources.Load("Gun Green v1") as GameObject;
 
         SetGuns();
 
