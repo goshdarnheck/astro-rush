@@ -33,15 +33,22 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void PowerUp(int level) {
-        print(level);
         switch (level) {
+            case 0:
+                gunSlotTop = gunBlueV1;
+                gunSlotBottom = null;
+                break;
             case 1:
+                gunSlotTop = gunBlueV1;
                 gunSlotBottom = gunBlueV1;
                 break;
             case 2:
-                print("LEVEL 2 SETUP");
                 gunSlotTop = gunGreenV1;
                 gunSlotBottom = gunBlueV1;
+                break;
+            case 3:
+                gunSlotTop = gunGreenV1;
+                gunSlotBottom = gunGreenV1;
                 break;
 
         }
@@ -127,6 +134,7 @@ public class PlayerController : MonoBehaviour {
 
     void ReloadGame() { // string referenced
         Destroy(gameObject);
+        //Destroy(scoreBoard);
         SceneManager.LoadScene(0);
     }
 

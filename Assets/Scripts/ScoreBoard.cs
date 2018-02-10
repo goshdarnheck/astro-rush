@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreBoard : MonoBehaviour {
 
     [SerializeField] Text healthText;
+    [SerializeField] Text levelText;
 
     private void Awake() {
         DontDestroyOnLoad(transform.gameObject);
@@ -13,6 +14,7 @@ public class ScoreBoard : MonoBehaviour {
 
     void Start() {
         healthText.text = "";
+        levelText.text = "1";
     }
 
     public void SetHealth(int healthValue) {
@@ -23,5 +25,9 @@ public class ScoreBoard : MonoBehaviour {
         }
 
         healthText.text = healthString;
+    }
+
+    public void SetLevelText(string newLevelText) {
+        levelText.text = newLevelText;
     }
 }

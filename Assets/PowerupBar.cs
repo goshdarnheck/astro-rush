@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerupBar : MonoBehaviour {
 
-    [SerializeField] int power = 1;
+    [SerializeField] int power = 0;
     [SerializeField] int powerLimit = 100;
     [SerializeField] int powerLevel = 0;
     GameObject cube;
@@ -24,19 +24,29 @@ public class PowerupBar : MonoBehaviour {
         UpdateTheCube();
     }
 
+    public void Reset() {
+        playerController = FindObjectOfType<PlayerController>();
+        power = 0;
+        powerLevel = 0;
+    }
+
     public void powerUp(int additionalPower) {
         power += additionalPower;
 
         if (power >= powerLimit) {
             powerLevel++;
-            power = 1;
-            // TODO - particle effect fun thing and satisfying sfx
-            print("Powered up!");
+            powerLimit = (powerLimit * 2) * powerLevel;
+            print("powerLimit: " + powerLimit);
+            power = 0;
             playerController.PowerUp(powerLevel);
+
+            // TODO - particle effect fun thing and satisfying sfx
         }
     }
 
     private void UpdateTheCube() {
-        cube.transform.localScale = new Vector3(power / 10f, 1f, 0.3f);
+        float powerPercentage = (float)power / (float)powerLimit * 100f;
+
+        cube.transform.localScale = new Vector3(powerPercentage / 10f, 1f, 0.3f);
     }
 }

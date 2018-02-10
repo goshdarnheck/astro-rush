@@ -8,10 +8,14 @@ public class LevelManager : MonoBehaviour {
     Wave[] waves;
     EnemyController[] enemies;
     PlayerController playerController;
+    PowerupBar powerupBar;
+    ScoreBoard scoreBoard;
 
     void Start() {
         waves = FindObjectsOfType<Wave>();
         playerController = FindObjectOfType<PlayerController>();
+        powerupBar = FindObjectOfType<PowerupBar>();
+        scoreBoard = FindObjectOfType<ScoreBoard>();
     }
 	
 	void Update() {
@@ -37,8 +41,11 @@ public class LevelManager : MonoBehaviour {
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
             nextSceneIndex = 0;
             Destroy(playerController.gameObject);
+            Destroy(scoreBoard.gameObject);
+            powerupBar.Reset();
         }
 
         SceneManager.LoadScene(nextSceneIndex);
+        scoreBoard.SetLevelText(nextSceneIndex.ToString());
     }
 }

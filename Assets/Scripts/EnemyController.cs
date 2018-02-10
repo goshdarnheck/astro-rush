@@ -38,7 +38,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        KillEnemy();
+        KillEnemy(false);
     }
 
     void OnParticleCollision(GameObject other) {
@@ -46,12 +46,15 @@ public class EnemyController : MonoBehaviour {
         Vector2 pos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
 
         if (rect.Contains(pos)) {
-            KillEnemy();
+            KillEnemy(true);
         }
     }
 
-    void KillEnemy() {
-        powerupBar.powerUp(scoreValue);
+    void KillEnemy(bool killedByParticle) {
+        if (killedByParticle) {
+            powerupBar.powerUp(scoreValue);
+        }
+        
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parentForFX;
         Destroy(gameObject);
