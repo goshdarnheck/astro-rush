@@ -5,8 +5,20 @@ using UnityEngine;
 public class Powerup : MonoBehaviour {
 
     enum Type { health, gun };
-    [SerializeField] Type type = Type.health;
-    [Tooltip("If above this object, can be killed.")] [SerializeField] Transform ground;
+    public float lifeTime = 5f;
+    Type type = Type.health;
+    Transform ground;
+
+    private void Start() {
+        StartCoroutine(DeathSentence());
+        ground = FindObjectOfType<Ground>().transform;
+    }
+
+    IEnumerator DeathSentence() {
+        yield return new WaitForSeconds(lifeTime);
+
+        Destroy(gameObject);
+    }
 
     void OnParticleCollision(GameObject other) {
         Rect rect = new Rect(-Mathf.Abs(ground.GetComponent<Renderer>().bounds.extents.x), -Mathf.Abs(ground.GetComponent<Renderer>().bounds.extents.z), ground.GetComponent<Renderer>().bounds.extents.x * 2, ground.GetComponent<Renderer>().bounds.extents.z * 2);
