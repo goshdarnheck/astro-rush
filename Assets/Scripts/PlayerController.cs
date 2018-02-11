@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour {
 
         if (health < 1) {
             isControlEnabled = false;
+            Destroy(scoreBoard.gameObject);
             Invoke("ReloadGame", levelLoadDelay);
             KillPlayer();
         }
@@ -128,13 +129,11 @@ public class PlayerController : MonoBehaviour {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parentForFX;
 
-        //transform.Translate(Vector3.down * 90);
-        
+        transform.Translate(Vector3.down * 90);
     }
 
     void ReloadGame() { // string referenced
         Destroy(gameObject);
-        //Destroy(scoreBoard);
         SceneManager.LoadScene(0);
     }
 

@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour {
             enemies = FindObjectsOfType<EnemyController>();
 
             if (enemies.Length <= 0) {
-                LoadNextLevel();
+                Invoke("LoadNextLevel", 2f);
             }
         }
     }
@@ -43,6 +43,8 @@ public class LevelManager : MonoBehaviour {
             Destroy(playerController.gameObject);
             Destroy(scoreBoard.gameObject);
             powerupBar.Reset();
+
+            playerController.transform.Translate(new Vector3(0,0,0));
         }
 
         SceneManager.LoadScene(nextSceneIndex);

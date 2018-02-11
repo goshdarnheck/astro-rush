@@ -197,6 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112692920}
   - component: {fileID: 112692919}
+  - component: {fileID: 112692921}
   m_Layer: 0
   m_Name: Wave (2)
   m_TagString: Untagged
@@ -216,10 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 5
-  rate: 2
+  remaining: 3
+  rate: 3
   speed: 3
-  scoreValue: 1
+  scoreValue: 5
   delay: 15
 --- !u!4 &112692920
 Transform:
@@ -234,6 +235,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112692921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112692918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1ad0deffd9bf84f9a34607093ae2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 10, y: 0, z: 0}
+  period: 5
 --- !u!1 &238277650
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 830706016}
   - component: {fileID: 830706015}
+  - component: {fileID: 830706017}
   m_Layer: 0
   m_Name: Wave (3)
   m_TagString: Untagged
@@ -642,10 +657,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 5
-  rate: 2
+  remaining: 3
+  rate: 3
   speed: 3
-  scoreValue: 1
+  scoreValue: 5
   delay: 20
 --- !u!4 &830706016
 Transform:
@@ -660,6 +675,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &830706017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830706014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1ad0deffd9bf84f9a34607093ae2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 20, y: 0, z: 0}
+  period: 2
 --- !u!1 &881706128 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1623909925619248, guid: 3d0183aa942a0ac4298a70afe0cd7b75,
@@ -780,6 +808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163252006}
   - component: {fileID: 1163252005}
+  - component: {fileID: 1163252007}
   m_Layer: 0
   m_Name: Wave (1)
   m_TagString: Untagged
@@ -799,11 +828,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 5
-  rate: 2
+  remaining: 3
+  rate: 3
   speed: 3
-  scoreValue: 1
-  delay: 8
+  scoreValue: 5
+  delay: 10
 --- !u!4 &1163252006
 Transform:
   m_ObjectHideFlags: 0
@@ -817,6 +846,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1163252007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163252004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1ad0deffd9bf84f9a34607093ae2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: 0, z: 5}
+  period: 5
 --- !u!20 &1187666610 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20382250320909684, guid: 641ffada478fad345ac66c753f8dc172,
@@ -831,6 +873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229047131}
   - component: {fileID: 1229047130}
+  - component: {fileID: 1229047132}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -850,10 +893,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 5
-  rate: 2
+  remaining: 3
+  rate: 3
   speed: 3
-  scoreValue: 1
+  scoreValue: 5
   delay: 0
 --- !u!4 &1229047131
 Transform:
@@ -862,12 +905,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1229047129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.02, y: 0, z: 0.42}
+  m_LocalPosition: {x: -20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229047132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1229047129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1ad0deffd9bf84f9a34607093ae2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: 0, z: 10}
+  period: 5
 --- !u!1 &1269843035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +1122,7 @@ MonoBehaviour:
   powerup: {fileID: 1190814074658038, guid: 7fc216b36dcb42e4bb542ea2709671dc, type: 2}
   remaining: 1
   rate: 1
-  delay: 5
+  delay: 10
   lifeTime: 20
 --- !u!4 &1397352171
 Transform:
@@ -1075,7 +1131,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397352169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.33, y: 0, z: 6.3}
+  m_LocalPosition: {x: 4.1, y: 0, z: 3.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1245,6 +1301,21 @@ Prefab:
     - target: {fileID: 4590671789794154, guid: 2470e057903533f4a87210a4374a15e5, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114532016040791200, guid: 2470e057903533f4a87210a4374a15e5,
+        type: 2}
+      propertyPath: spinSpeedFactor
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114532016040791200, guid: 2470e057903533f4a87210a4374a15e5,
+        type: 2}
+      propertyPath: spinSpeedBound
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114532016040791200, guid: 2470e057903533f4a87210a4374a15e5,
+        type: 2}
+      propertyPath: health
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2470e057903533f4a87210a4374a15e5, type: 2}

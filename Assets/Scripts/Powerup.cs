@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour {
 
-    enum Type { health, gun };
     public float lifeTime = 5f;
-    Type type = Type.health;
     Transform ground;
 
     private void Start() {
