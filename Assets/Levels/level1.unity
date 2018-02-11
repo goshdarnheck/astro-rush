@@ -799,6 +799,7 @@ MonoBehaviour:
   power: 1
   powerLimit: 100
   powerLevel: 0
+  powerFX: {fileID: 1469142659871422, guid: 365d4637acd6a004ab8fb37a94f88a66, type: 2}
 --- !u!1 &1163252004
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +897,7 @@ MonoBehaviour:
   remaining: 3
   rate: 3
   speed: 3
-  scoreValue: 5
+  scoreValue: 50
   delay: 0
 --- !u!4 &1229047131
 Transform:

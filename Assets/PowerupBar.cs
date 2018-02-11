@@ -8,6 +8,8 @@ public class PowerupBar : MonoBehaviour {
     [SerializeField] int powerLimit = 100;
     [SerializeField] int powerLevel = 0;
     GameObject cube;
+    Transform parentForFX;
+    [SerializeField] GameObject powerFX;
     PlayerController playerController;
 
     private void Awake() {
@@ -17,6 +19,7 @@ public class PowerupBar : MonoBehaviour {
     private void Start() {
         playerController = FindObjectOfType<PlayerController>();
         cube = gameObject.transform.GetChild(0).gameObject;
+        parentForFX = FindObjectOfType<RuntimeSpawn>().transform;
         UpdateTheCube();
     }
 
@@ -31,7 +34,7 @@ public class PowerupBar : MonoBehaviour {
         powerLimit = 100;
     }
 
-    public void powerUp(int additionalPower) {
+    public void PowerUp(int additionalPower) {
         power += additionalPower;
 
         if (power >= powerLimit) {
@@ -41,7 +44,9 @@ public class PowerupBar : MonoBehaviour {
             power = 0;
             playerController.PowerUp(powerLevel);
 
-            // TODO - particle effect fun thing and satisfying sfx
+            var position = transform.localPosition + transform.right * 5f;
+            GameObject fx = Instantiate(powerFX, position, Quaternion.identity);
+            fx.transform.parent = parentForFX;
         }
     }
 

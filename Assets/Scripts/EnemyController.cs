@@ -52,7 +52,7 @@ public class EnemyController : MonoBehaviour {
 
     void KillEnemy(bool killedByParticle) {
         if (killedByParticle) {
-            powerupBar.powerUp(scoreValue);
+            powerupBar.PowerUp(scoreValue);
         }
         
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
