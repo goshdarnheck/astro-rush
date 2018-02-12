@@ -165,10 +165,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoadDelay: 3
-  health: 5
+  health: 3
   healthLimit: 10
-  spinSpeedFactor: 15
-  spinSpeedBound: 150
+  spinSpeedFactor: 20
+  spinSpeedBound: 180
   gunSlotTop: {fileID: 1375277124653198, guid: 21f9165672dfc1a4a87b1f45603ab581, type: 2}
   gunSlotBottom: {fileID: 0}
   deathFX: {fileID: 1015220829237886, guid: 3e60b281edf5cb7419f0471da2a43679, type: 2}

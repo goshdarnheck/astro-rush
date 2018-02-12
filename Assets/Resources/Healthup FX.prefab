@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 82066357516516448}
   - component: {fileID: 114167231077255906}
   m_Layer: 0
-  m_Name: Powerup FX
+  m_Name: Healthup FX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,13 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1469142659871422}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.425367, y: -0.5, z: -4.827904}
-  m_LocalScale: {x: 0.4124293, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0.00000006120475, y: -0.721109, z: -0.4919242, w: 0.48786524}
+  m_LocalPosition: {x: 4.3122754, y: -0.5, z: -2.6443877}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -45.191, y: -93.253006, z: -42.928}
 --- !u!82 &82066357516516448
 AudioSource:
   m_ObjectHideFlags: 1
@@ -52,7 +52,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d1ecef0e3da6af6419fc945c4aebc006, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 22049a45205be5546906802e049c2b80, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -194,7 +194,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 386708458
+  randomSeed: 499665247
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -284,7 +284,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.32413793, g: 1, b: 0, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.47586203, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -637,8 +637,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 0
-    angle: 0
+    type: 4
+    angle: 50
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -659,7 +659,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 5
+      value: 50
       mode: 0
       spread: 0
       speed:
@@ -705,7 +705,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 0
+      mode: 1
       spread: 0
       speed:
         serializedVersion: 2

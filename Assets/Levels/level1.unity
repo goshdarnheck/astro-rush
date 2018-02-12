@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 3
+  rate: 1
   speed: 3
   scoreValue: 5
   delay: 15
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 3
+  rate: 1
   speed: 3
   scoreValue: 5
   delay: 20
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 3
+  rate: 1
   speed: 3
   scoreValue: 5
   delay: 10
@@ -895,9 +895,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 3
+  rate: 1
   speed: 3
-  scoreValue: 50
+  scoreValue: 5
   delay: 0
 --- !u!4 &1229047131
 Transform:
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   powerup: {fileID: 1190814074658038, guid: 7fc216b36dcb42e4bb542ea2709671dc, type: 2}
   remaining: 1
   rate: 1
-  delay: 10
+  delay: 5
   lifeTime: 20
 --- !u!4 &1397352171
 Transform:
@@ -1132,7 +1132,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397352169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1, y: 0, z: 3.78}
+  m_LocalPosition: {x: -0.15, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1306,17 +1306,7 @@ Prefab:
     - target: {fileID: 114532016040791200, guid: 2470e057903533f4a87210a4374a15e5,
         type: 2}
       propertyPath: spinSpeedFactor
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114532016040791200, guid: 2470e057903533f4a87210a4374a15e5,
-        type: 2}
-      propertyPath: spinSpeedBound
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 114532016040791200, guid: 2470e057903533f4a87210a4374a15e5,
-        type: 2}
-      propertyPath: health
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2470e057903533f4a87210a4374a15e5, type: 2}
@@ -1497,6 +1487,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
   BlockCount: 512
+--- !u!1 &1973055059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1973055061}
+  - component: {fileID: 1973055060}
+  m_Layer: 0
+  m_Name: Wave (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1973055060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973055059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5c14ac358d5c24b967fc66a2b4fff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
+  remaining: 3
+  rate: 1
+  speed: 3
+  scoreValue: 5
+  delay: 25
+--- !u!4 &1973055061
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973055059}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26, y: 0, z: -10.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987345171
 GameObject:
   m_ObjectHideFlags: 0
