@@ -28,10 +28,14 @@ public class PowerupBar : MonoBehaviour {
     }
 
     public void Reset() {
-        playerController = FindObjectOfType<PlayerController>();
+        //playerController = FindObjectOfType<PlayerController>();
         power = 0;
         powerLevel = 0;
         powerLimit = 100;
+    }
+
+    public void ReloadPlayerObject() {
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     public void PowerUp(int additionalPower) {

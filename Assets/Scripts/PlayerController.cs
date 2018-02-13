@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour {
     bool isControlEnabled = true;
     float spin = 0f;
     ScoreBoard scoreBoard;
+    PowerupBar powerupBar;
+    LevelManager levelManager;
 
     private void Awake() {
         DontDestroyOnLoad(transform.gameObject);
@@ -68,6 +70,11 @@ public class PlayerController : MonoBehaviour {
 
         //gunSlotBottom = Resources.Load("Gun Green v1") as GameObject;
         //Invoke("SetGunBottom", 2f);
+
+        powerupBar = FindObjectOfType<PowerupBar>();
+        powerupBar.ReloadPlayerObject();
+
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     private void SetGuns() {
@@ -109,7 +116,6 @@ public class PlayerController : MonoBehaviour {
 
         if (health < 1) {
             isControlEnabled = false;
-            Destroy(scoreBoard.gameObject);
             Invoke("ReloadGame", levelLoadDelay);
             KillPlayer();
         }
@@ -132,9 +138,8 @@ public class PlayerController : MonoBehaviour {
         transform.Translate(Vector3.down * 90);
     }
 
-    void ReloadGame() { // string referenced
-        Destroy(gameObject);
-        SceneManager.LoadScene(0);
+    void ReloadGame() {
+        levelManager.LoadFirstScene();
     }
 
     void ProcessRotation() {

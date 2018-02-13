@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 1
+  rate: 2
   speed: 3
   scoreValue: 5
   delay: 15
@@ -658,10 +658,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 1
+  rate: 2
   speed: 3
   scoreValue: 5
-  delay: 20
+  delay: 25
 --- !u!4 &830706016
 Transform:
   m_ObjectHideFlags: 0
@@ -742,11 +742,6 @@ Prefab:
     - target: {fileID: 4717466114619842, guid: 641ffada478fad345ac66c753f8dc172, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114881876565406218, guid: 641ffada478fad345ac66c753f8dc172,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 641ffada478fad345ac66c753f8dc172, type: 2}
@@ -830,7 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 1
+  rate: 2
   speed: 3
   scoreValue: 5
   delay: 10
@@ -895,7 +890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 1
+  rate: 2
   speed: 3
   scoreValue: 5
   delay: 0
@@ -1469,24 +1464,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784045037}
---- !u!1 &1840209738 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1838588375144992, guid: 641ffada478fad345ac66c753f8dc172,
-    type: 2}
-  m_PrefabInternal: {fileID: 924374450}
---- !u!114 &1840209739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1840209738}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42cd8dcae69d178488f5efa28e7c7e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
-  BlockCount: 512
 --- !u!1 &1973055059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,10 +1493,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
   remaining: 3
-  rate: 1
+  rate: 2
   speed: 3
   scoreValue: 5
-  delay: 25
+  delay: 30
 --- !u!4 &1973055061
 Transform:
   m_ObjectHideFlags: 0

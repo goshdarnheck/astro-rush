@@ -95,8 +95,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052473017931228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.2, y: 0, z: -36.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4529267699041298}
   - {fileID: 4108327728007958}
@@ -196,13 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5f62ec3fcac2d40886c901469994dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 2
-  deathFX: {fileID: 1469142659871422, guid: ab79a37535b979f48b6de56e3a0a5cb0, type: 2}
-  parentForFX: {fileID: 0}
-  target: {fileID: 0}
-  ground: {fileID: 0}
   speed: 4
-  movementType: 0
+  scoreValue: 2
 --- !u!136 &136304529847766578
 CapsuleCollider:
   m_ObjectHideFlags: 1

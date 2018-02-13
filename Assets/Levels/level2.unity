@@ -156,11 +156,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 5
-  rate: 1
+  remaining: 10
+  rate: 2
   speed: 3
   scoreValue: 5
-  delay: 32
+  delay: 35
 --- !u!4 &71406602
 Transform:
   m_ObjectHideFlags: 0
@@ -330,8 +330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 5
-  rate: 1
+  remaining: 10
+  rate: 2
   speed: 3
   scoreValue: 5
   delay: 30
@@ -491,8 +491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 10
-  rate: 1
+  remaining: 5
+  rate: 2
   speed: 3
   scoreValue: 5
   delay: 5
@@ -755,8 +755,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 10
-  rate: 1
+  remaining: 5
+  rate: 2
   speed: 3
   scoreValue: 5
   delay: 0
@@ -1332,8 +1332,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 5
-  rate: 1
+  remaining: 10
+  rate: 2
   speed: 3
   scoreValue: 5
   delay: 30
@@ -1392,11 +1392,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1429860228878386, guid: bba4116b34838e24598dab28d6d78c81, type: 2}
-  remaining: 5
-  rate: 1
+  remaining: 10
+  rate: 2
   speed: 3
   scoreValue: 5
-  delay: 32
+  delay: 35
 --- !u!4 &2097633664
 Transform:
   m_ObjectHideFlags: 0

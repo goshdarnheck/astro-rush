@@ -39,13 +39,21 @@ public class LevelManager : MonoBehaviour {
         int nextSceneIndex = currentSceneIndex + 1;
 
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
-            nextSceneIndex = 0;
-            Destroy(playerController.gameObject);
-            Destroy(scoreBoard.gameObject);
-            powerupBar.Reset();
-
-            playerController.transform.Translate(new Vector3(0,0,0));
+            LoadFirstScene();
+        } else {
+            SceneManager.LoadScene(nextSceneIndex);
+            scoreBoard.SetLevelText(nextSceneIndex.ToString());
         }
+    }
+
+    public void LoadFirstScene() {
+        int nextSceneIndex = 0;
+
+        Destroy(playerController.gameObject);
+        Destroy(scoreBoard.gameObject);
+        powerupBar.Reset();
+
+        playerController.transform.Translate(new Vector3(0, 0, 0));
 
         SceneManager.LoadScene(nextSceneIndex);
         scoreBoard.SetLevelText(nextSceneIndex.ToString());
