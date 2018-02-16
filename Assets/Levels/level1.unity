@@ -1301,7 +1301,12 @@ Prefab:
     - target: {fileID: 114532016040791200, guid: 2470e057903533f4a87210a4374a15e5,
         type: 2}
       propertyPath: spinSpeedFactor
-      value: 10
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114532016040791200, guid: 2470e057903533f4a87210a4374a15e5,
+        type: 2}
+      propertyPath: spinSpeedBound
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2470e057903533f4a87210a4374a15e5, type: 2}
