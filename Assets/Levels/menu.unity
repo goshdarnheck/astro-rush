@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 73278425}
   - component: {fileID: 73278424}
   - component: {fileID: 73278423}
-  - component: {fileID: 73278421}
   - component: {fileID: 73278426}
   m_Layer: 0
   m_Name: Ui Camera
@@ -133,28 +132,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &73278421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 73278420}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad5467732270489caa1d54fe84f1618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalResolution: 500
-  verticalResolution: 500
-  numColors: 8
-  color0: {r: 0, g: 0, b: 0, a: 1}
-  color1: {r: 1, g: 1, b: 1, a: 1}
-  color2: {r: 1, g: 0.29411766, b: 0.29411766, a: 1}
-  color3: {r: 1, g: 0.7294118, b: 0.07450981, a: 1}
-  color4: {r: 0.91764706, g: 0.9137255, b: 0, a: 1}
-  color5: {r: 0.5176471, g: 0.8117647, b: 0.27058825, a: 1}
-  color6: {r: 0, g: 0.64705884, b: 0.7921569, a: 1}
-  color7: {r: 0.7529412, g: 0.41568628, b: 0.7607843, a: 1}
 --- !u!124 &73278423
 Behaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +193,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 73278420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42cd8dcae69d178488f5efa28e7c7e78, type: 3}
   m_Name: 
