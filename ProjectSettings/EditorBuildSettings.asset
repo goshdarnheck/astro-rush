@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Levels/ghosthugs.unity
-    guid: 0693bdd29c57d4c4b82096fed19d64de
-  - enabled: 1
     path: Assets/Levels/menu.unity
     guid: f605c1098e6cb46408474f1cdf3c94f2
   - enabled: 1

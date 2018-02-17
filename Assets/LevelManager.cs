@@ -42,8 +42,7 @@ public class LevelManager : MonoBehaviour {
             LoadFirstScene();
         } else {
             SceneManager.LoadScene(nextSceneIndex);
-            int waveNumber = nextSceneIndex - 1;
-            scoreBoard.SetLevelText(waveNumber.ToString());
+            scoreBoard.SetLevelText(nextSceneIndex.ToString());
         }
     }
 
