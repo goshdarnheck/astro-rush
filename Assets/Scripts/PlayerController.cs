@@ -68,9 +68,6 @@ public class PlayerController : MonoBehaviour {
 
         SetGuns();
 
-        //gunSlotBottom = Resources.Load("Gun Green v1") as GameObject;
-        //Invoke("SetGunBottom", 2f);
-
         powerupBar = FindObjectOfType<PowerupBar>();
         powerupBar.ReloadPlayerObject();
 
