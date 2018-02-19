@@ -328,7 +328,7 @@ MonoBehaviour:
   rate: 1
   speed: 3
   scoreValue: 5
-  delay: 20
+  delay: 15
 --- !u!4 &406269707
 Transform:
   m_ObjectHideFlags: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
   rate: 10
   speed: 3
   scoreValue: 5
-  delay: 20
+  delay: 16
 --- !u!4 &740049194
 Transform:
   m_ObjectHideFlags: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
   rate: 10
   speed: 3
   scoreValue: 5
-  delay: 35
+  delay: 15.5
 --- !u!4 &793784521
 Transform:
   m_ObjectHideFlags: 0
@@ -1102,7 +1102,7 @@ MonoBehaviour:
   rate: 1
   speed: 4
   scoreValue: 15
-  delay: 5
+  delay: 3.5
 --- !u!4 &1911248188
 Transform:
   m_ObjectHideFlags: 0
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   rate: 1
   speed: 3
   scoreValue: 5
-  delay: 35
+  delay: 15
 --- !u!4 &1964975666
 Transform:
   m_ObjectHideFlags: 0
