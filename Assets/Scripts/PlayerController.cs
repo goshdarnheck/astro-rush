@@ -105,6 +105,10 @@ public class PlayerController : MonoBehaviour {
         if (isControlEnabled) {
             ProcessRotation();
         }
+
+        if (Input.GetKey("escape")) {
+            Application.Quit();
+        }
     }
 
     void OnPlayerHit() { // called by string reference
